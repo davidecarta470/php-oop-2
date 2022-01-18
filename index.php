@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__.'/Utente.php';
 require_once __DIR__.'/UtentePremium.php';
-$utente1 = new Utente("Mario","Rossi",1);
+$utente1 = new Utente("Mario","Rossi",4);
 $utente2 = new UtentePremium("Giuseppe","Verdi",2);
 
 var_dump($utente1);

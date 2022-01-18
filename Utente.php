@@ -14,7 +14,7 @@ class Utente{
   public function getDiscound(){
     if($this->numberOfProductsPurchased > 1){
        $this->discount = 10;
-       return "l'utente $this->name $this->lastname ha ricevuto uno sconto del $this->discount %<br>";
+       return "l'utente $this->name $this->lastname ha ricevuto uno sconto del $this->discount per l'aquisto di $this->numberOfProductsPurchased prodotti<br>";
     }
     return "non sono previsti sconti per l'utente $this->name $this->lastname<br>";
   }
