@@ -18,6 +18,9 @@ class UtentePremium extends Utente{
     }
     return "non sono previsti sconti per l'utente $this->name $this->lastname<br>";
   }
+
+
+  //assegnazione della carta premium gold
   public function setPremiumCard($_name,$_lastname,$_subscriptionNumber){
     if($_name == $this->name &&$this->lastname == $_lastname){
       try {

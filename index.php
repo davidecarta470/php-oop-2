@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__.'/Utente.php';
 require_once __DIR__.'/UtentePremium.php';
-require_once __DIR__.'/CredidCard.php';
+
 require_once __DIR__.'/PremiumGold.php';
 
 //assegnazione utente 1 con 0 acquisti
@@ -26,7 +26,7 @@ var_dump($utentePremium);
 //messaggio di info sugli sconti applicati all'utente 1
 echo $utente1->getDiscound();
 
-//messaggio di info sugli sconti applicati all'utente 
+//messaggio di info sugli sconti applicati all'utente Premium
 echo $utentePremium->getDiscound();
 
 
