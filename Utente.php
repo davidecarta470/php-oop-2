@@ -1,10 +1,10 @@
 <?php
 class Utente{
-  public $name;
-  public $lastname;
-  public $email;
-  public $numberOfProductsPurchased;
-  public $discount;
+  protected $name;
+  protected $lastname;
+  protected $email;
+  protected $numberOfProductsPurchased;
+  protected $discount =10;
   function __construct($_name,$_lastname,$_numberOfProductsPurchased)
   {
     $this->name = $_name;
@@ -13,8 +13,8 @@ class Utente{
   }
   public function getDiscound(){
     if($this->numberOfProductsPurchased > 1){
-       $this->discount = 10;
-       return "l'utente $this->name $this->lastname ha ricevuto uno sconto del $this->discount per l'aquisto di $this->numberOfProductsPurchased prodotti<br>";
+       
+       return "l'utente $this->name $this->lastname ha ricevuto uno sconto del $this->discount% per l'aquisto di $this->numberOfProductsPurchased prodotti<br>";
     }
     return "non sono previsti sconti per l'utente $this->name $this->lastname<br>";
   }

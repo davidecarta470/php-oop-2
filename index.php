@@ -1,14 +1,36 @@
 <?php
 require_once __DIR__.'/Utente.php';
 require_once __DIR__.'/UtentePremium.php';
-$utente1 = new Utente("Mario","Rossi",4);
-$utente2 = new UtentePremium("Giuseppe","Verdi",2);
+require_once __DIR__.'/CredidCard.php';
+require_once __DIR__.'/PremiumGold.php';
 
+//assegnazione utente 1 con 0 acquisti
+$utente1 = new Utente("Mario","Rossi",0);
+
+//assegnazione utente premium con 2 acquisti 
+$utentePremium = new UtentePremium("Giuseppe","Verdi",2);
+
+
+//visualizzazion utente 1
 var_dump($utente1);
-var_dump($utente2);
 
+//visualizzazione utentePremium
+var_dump($utentePremium);
+
+//assegnazione numero carta gold ad utente Premium e visualizzazione
+//in caso in cui il nome è sbagliato da un errore
+$utentePremium->setPremiumCard("Giuseppe","Verdi",345667);
+
+//visualizzazione utente premium con assegnazione del numero di carta Premium Gold
+var_dump($utentePremium);
+//messaggio di info sugli sconti applicati all'utente 1
 echo $utente1->getDiscound();
-echo $utente2->getDiscound();
+
+//messaggio di info sugli sconti applicati all'utente 
+echo $utentePremium->getDiscound();
+
+
+
 
 
 
